@@ -1,2 +1,2 @@
-# MetPetTec-Lab
-Official website of the Metamorphic Petrology and Tectonics Laboratory
+# PETROTEC-Lab
+Official website of the Petrology, Tectonics and Crustal Evolution Laboratory
