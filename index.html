@@ -593,7 +593,7 @@ a:hover { color:#ffd0a6 !important; }
   background:
     linear-gradient(90deg,rgba(4,17,26,.91) 0%,rgba(4,17,26,.72) 48%,rgba(4,17,26,.22) 100%),
     linear-gradient(0deg,rgba(4,17,26,.42),rgba(4,17,26,.08)),
-    url("assets/images/department-applied-geology.jpg") center 48% / cover no-repeat !important;
+    url("assets/images/home-mountain-background.jpg") center 48% / cover no-repeat !important;
 }
 .hero-darken { background:transparent !important; }
 .reference-hero-copy { max-width:720px !important; }
@@ -819,6 +819,153 @@ main.wrap { font-size:18px; }
 }
 </style>
 
+
+<style id="department-lockup-overflow-fix">
+/* Keep the department name clear of the vertical divider in the shared header. */
+.reference-header-inner .university-lockup {
+  min-width: 0 !important;
+  gap: 12px !important;
+  padding-left: 24px !important;
+  margin-left: 4px !important;
+  border-left: 1px solid rgba(232,239,238,.40) !important;
+}
+.reference-header-inner .university-lockup > span {
+  display: block !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  max-width: 255px !important;
+  text-align: right !important;
+  overflow-wrap: anywhere !important;
+}
+.reference-header-inner .university-lockup b {
+  display: block !important;
+  max-width: 100% !important;
+  font-size: clamp(13px, 1.02vw, 15px) !important;
+  line-height: 1.25 !important;
+  letter-spacing: .075em !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+}
+.reference-header-inner .university-lockup small {
+  display: block !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+  white-space: normal !important;
+}
+@media (min-width:1251px) {
+  .reference-header-inner {
+    grid-template-columns: minmax(250px,1.05fr) minmax(265px,.9fr) minmax(430px,1.8fr) !important;
+    column-gap: 16px !important;
+  }
+}
+</style>
+
+
+<style id="department-heading-readable-size">
+.reference-header-inner .university-lockup b {
+  font-size: clamp(13px, 1.02vw, 15px) !important;
+  line-height: 1.3 !important;
+  letter-spacing: .065em !important;
+}
+@media (max-width: 900px) {
+  .reference-header-inner .university-lockup b {
+    font-size: 12px !important;
+  }
+}
+</style>
+
+
+<style id="past-group-compact-list">
+.past-alumni-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  border-top: 1px solid var(--line, rgba(180,190,195,.25));
+}
+.past-alumni-item {
+  padding: 16px 0 17px;
+  border-bottom: 1px solid var(--line, rgba(180,190,195,.25));
+  min-width: 0;
+}
+.past-alumni-item h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 650;
+  color: var(--ink, inherit);
+}
+.past-alumni-thesis {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted, inherit);
+}
+@media (max-width: 700px) {
+  .past-alumni-list { grid-template-columns: 1fr; }
+}
+</style>
+
+
+<style id="opportunities-and-collaborations-page">
+.research-opportunities {
+  max-width: 86ch;
+  margin: 26px 0;
+}
+.research-opportunities h3 {
+  margin: 0 0 14px;
+  font-size: 21px;
+  color: var(--ink);
+}
+.research-opportunities p {
+  margin: 0 0 16px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+.collaboration-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+.collaboration-item {
+  padding: 24px;
+  border: 1px solid var(--rule, rgba(180,195,200,.25));
+  border-radius: 10px;
+  background: var(--surface, rgba(255,255,255,.025));
+}
+.collaboration-country {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.collaboration-item h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  line-height: 1.4;
+}
+.collaboration-item h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.collaboration-item h3 a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.collaboration-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+@media (max-width: 700px) {
+  .collaboration-list { grid-template-columns: 1fr; }
+}
+</style>
+
 </head>
 <body>
 
@@ -834,8 +981,8 @@ main.wrap { font-size:18px; }
 <div class="university-lockup"><span><b>DEPARTMENT OF APPLIED GEOLOGY</b><small>Dibrugarh University, Assam, India</small></span><img class="brand-logo" src="assets/images/department-applied-geology.jpg" alt="Department of Applied Geology building, Dibrugarh University" width="240" height="240"></div>
 <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
 <nav class="nav reference-nav" id="site-nav" aria-label="Main">
-<div class="nav-main"><a href="#home">Home</a><a href="#about">About</a><a href="#research">Research</a><a href="#group">Group</a><a href="#publications">Publications</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
-<div class="nav-secondary"><a href="#prospective">Prospective Doctoral and Postdoctoral Researchers</a><span>|</span></div></nav></div></header>
+<div class="nav-main"><a href="#home">Home</a><a href="#about">About</a><a href="#research">Research</a><a href="#group">Group</a><a href="#publications">Publications</a><a href="#collaborations">Collaborations</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+<div class="nav-secondary"><a href="#prospective">Join this Group</a><span>|</span></div></nav></div></header>
 
 <main class="wrap">
 
@@ -953,7 +1100,7 @@ main.wrap { font-size:18px; }
     <div class="stack">
       <p class="label">Ongoing Research</p>
       <h2>Ongoing Research</h2>
-  <p>Current research integrates field geology, petrology, geochemistry, thermodynamic modelling, microstructural analysis, and geochronology to investigate crustal processes in the Himalaya and Precambrian terrains of Northeast India.</p>
+  <p>.</p>
     </div>
   </div>
 
@@ -1073,7 +1220,7 @@ main.wrap { font-size:18px; }
   <div class="page-head">
     <p class="label">Group</p>
     <h2>Research Group: PETROTEC Lab</h2>
-    <p>PETROTEC Lab, led by Dr. Purbajyoti Phukon at the Department of Applied Geology, Dibrugarh University, focuses on understanding the evolution of continental crust through the interplay of metamorphic, magmatic, tectonic, and geochemical processes operating through geological time.</p>
+    <p></p>
     <p>The overarching objective of the laboratory is to unravel the processes governing crustal melting, mineral growth, deformation, exhumation, and fluid–rock interaction, and to explore their implications for geological carbon cycling and critical metal enrichment. Through integrated field-based, petrological, geochemical, thermodynamic, and geochronological investigations, the laboratory seeks to address fundamental questions in Earth Sciences, with particular emphasis on the Himalayan orogen and Precambrian crystalline terrains of Northeast India.</p>
   </div>
   <section style="margin-top:0">
@@ -1090,7 +1237,7 @@ main.wrap { font-size:18px; }
     <div class="section-title"><h2>Current group members</h2><span class="label">Doctoral researchers</span></div>
     <ul class="scholars">
       <li class="scholar">
-        <img class="scholar-photo" src="assets/hussain.jpg" alt="Md. Sunny Hussain" width="480" height="600" loading="lazy">
+        <img class="scholar-photo" src="assets/images/md-sunny-hussain.jpg" alt="Md. Sunny Hussain" width="480" height="600" loading="lazy">
         <div class="scholar-body">
           <div><h4 class="scholar-name">Md. Sunny Hussain</h4><p class="scholar-role">PhD Scholar</p></div>
           <div class="scholar-topic"><span class="label">Thesis topic</span><p>“Tectono-metamorphic evolution of Arunachal Himalaya, NE India”</p></div>
@@ -1124,172 +1271,53 @@ main.wrap { font-size:18px; }
           <p class="meta"><span class="label">Status</span> <span class="status ongoing">In progress</span></p>
         </div>
       </li>
+
+      <li class="scholar">
+        <img class="scholar-photo" src="assets/images/pritam-baruah.jpg" alt="Pritam Baruah" width="480" height="600" loading="lazy">
+        <div class="scholar-body">
+          <div><h4 class="scholar-name">Pritam Baruah</h4><p class="scholar-role">PhD Scholar</p></div>
+          <div class="scholar-topic"><span class="label">Thesis topic</span><p>“Genesis and Geological Controls of Vanadium Mineralization in the Arunachal Himalaya”</p></div>
+          <p class="meta"><span class="label">Status</span> <span class="status ongoing">Ongoing</span></p>
+        </div>
+      </li>
     </ul>
   </section>
   <section>
     <div class="section-title"><h2>Past Group Members</h2><span class="label">M.Sc. dissertation researchers</span></div>
-    <ul class="scholars past-scholars">
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Sukanya Gogoi to be supplied"><span>SG</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Sukanya Gogoi</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Microtextural and metamorphic P–T evolution of the Precambrian basement rocks of Meghalaya, NE India: insights from Nongstoin migmatitic granite gneiss”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Mayurakshi Paul to be supplied"><span>MP</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Mayurakshi Paul</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Distribution of melt fractions in migmatites across the Zimithang Thrust, Western Arunachal Himalaya, NE India: a study based on the zircon melt-o-meter technique”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Kallul Borgohain to be supplied"><span>KB</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Kallul Borgohain</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Mesoscopic deformation and microtextures of the Greater Himalayan Sequence, Eastern Arunachal Himalaya, NE India: an integrated study to understand structural and metamorphic evolution”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Navya Sonowal to be supplied"><span>NS</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Navya Sonowal</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Determination of paleostress and strain in the hanging wall of the Lumla Thrust, Western Arunachal Himalaya, NE India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Bishal Boruah to be supplied"><span>BB</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Bishal Boruah</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“An integrated petrographic, textural and metamorphic study of the Greater Himalayan Sequence, Western Arunachal Himalaya, NE India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Protyush Neog to be supplied"><span>PN</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Protyush Neog</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Characterizing the inverse metamorphic sequence in the Lower Greater Himalayan Sequence, Eastern Arunachal Himalaya, NE India: a microtextural study”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Deepsanu Sharma to be supplied"><span>DS</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Deepsanu Sharma</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Determination of deformation temperature, differential stress and strain rate in the Bomdila Gneiss, Western Arunachal Himalaya, NE India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Marian Chorai to be supplied"><span>MC</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Marian Chorai</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Vorticity analysis across the Bomdila Gneiss along the Bhalukpong–Bomdila–Dirang transect, Western Arunachal Himalaya, NE India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of N. Mosmi Singha to be supplied"><span>NM</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">N. Mosmi Singha</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Metamorphism of the Nongstoin Granite Gneiss of West Khasi Hills, Meghalaya, NE India: an integrated textural and geothermobarometric study”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Rajdeep Hore to be supplied"><span>RH</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Rajdeep Hore</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Crystal size distribution analysis in the Nongpoh granitoids, Meghalaya, NE India: insights into crystal nucleation and growth rate”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Samudrajee Baruah to be supplied"><span>SB</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Samudrajee Baruah</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“A review of the structural framework, metamorphic history and geochronological records of the Aravalli Craton, NW India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Wazbir Ahmed to be supplied"><span>WA</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Wazbir Ahmed</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Variation of the kinematic vorticity number of mylonitic rocks in and around the Lumla Thrust, Western Arunachal Himalaya, Northeast India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Bedanto Chutia to be supplied"><span>BC</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Bedanto Chutia</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Digital image analysis of the Sela Group of rocks, Arunachal Himalaya, NE India: implications for crustal deformation”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Rituraj Hazarika to be supplied"><span>RH</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Rituraj Hazarika</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“A review study on the formation of Himalayan leucogranite”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Runjun Boruah to be supplied"><span>RB</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Runjun Boruah</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Deformation temperature and vorticity pattern along the Barapani–Tyrsad Shear Zone, East Khasi Hills, Meghalaya”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Jubaraj Borgohain to be supplied"><span>JB</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Jubaraj Borgohain</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“A study on deformation patterns along the Tawang–Lumla section, Western Arunachal Himalaya, NE India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Bhaskar Jyoti Dihingia to be supplied"><span>BJ</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Bhaskar Jyoti Dihingia</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“A study on partial melting of rocks in the Greater Himalayan Sequence, Western Arunachal Himalaya, NE India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Kalpajyoti Mazumdar to be supplied"><span>KM</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Kalpajyoti Mazumdar</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Vorticity analysis across the Zimithang Thrust, Western Arunachal Himalaya, Northeast India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Keneisa-u-Kense to be supplied"><span>K</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Keneisa-u-Kense</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Petrographic and microstructural studies of basement rocks in and around Nongstoin, West Khasi Hills, Meghalaya”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Rajashree Gogoi to be supplied"><span>RG</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Rajashree Gogoi</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Deformation temperature, differential paleostress and strain rate variation in the Barapani–Tyrsad Shear Zone, East Khasi Hills, Meghalaya, NE India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Himangshu Saikia to be supplied"><span>HS</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Himangshu Saikia</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Concept of supercontinents: a review study”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Yashaswi Doley to be supplied"><span>YD</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Yashaswi Doley</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Metamorphism in subduction zones”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Chajung Shamnyei Phom to be supplied"><span>CS</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Chajung Shamnyei Phom</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Tectonic evolution of the Naga–Manipur belt”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Samudra Jyoti Dutta Baruah to be supplied"><span>SJ</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Samudra Jyoti Dutta Baruah</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Origin and evolution of migmatites”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Ruvito K. P. Chaya to be supplied"><span>RK</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Ruvito K. P. Chaya</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Zircon textures in igneous and metamorphic rocks”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Debashri Kuli to be supplied"><span>DK</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Debashri Kuli</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“A review study on shear zone microstructures”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Bhargabi Hazarika to be supplied"><span>BH</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Bhargabi Hazarika</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Timing of displacement along the Main Central Thrust Zone in the Himalaya: a review study”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Ishan Jyoti Chetia to be supplied"><span>IJ</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Ishan Jyoti Chetia</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“A review study on metamorphism of the Lesser and Greater Himalayan Sequences of the Western Arunachal Himalaya, NE India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Sabyasachi Ganguly to be supplied"><span>SG</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Sabyasachi Ganguly</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“A review of the deformational records of the Lesser Himalayan Crystalline Sequence, Northeast Himalaya, India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Tara Shankar Goswami to be supplied"><span>TS</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Tara Shankar Goswami</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Structural architecture across the Main Central Thrust Zone of the NE Himalaya, India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Sourish Nath to be supplied"><span>SN</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Sourish Nath</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“A review study on the petrography, microstructure and geochemistry of the Bomdila Gneiss, Arunachal Pradesh, India”</p></div></div>
-      </li>
-      <li class="past-member scholar">
-        <div class="past-photo" role="img" aria-label="Photograph of Miraj Chetry to be supplied"><span>MC</span></div>
-        <div class="scholar-body"><div><h4 class="scholar-name">Miraj Chetry</h4><p class="scholar-role">Past M.Sc. dissertation researcher</p></div>
-        <div class="scholar-topic"><span class="label">Dissertation</span><p>“Paleoproterozoic Lesser Himalayan Crystalline Sequence: insights for the reconstruction of the Columbia supercontinent”</p></div></div>
-      </li>
-    </ul>
+    <div class="past-alumni-list">
+  <article class="past-alumni-item"><h3>Sukanya Gogoi</h3><p class="past-alumni-thesis">“Microtextural and metamorphic P–T evolution of the Precambrian basement rocks of Meghalaya, NE India: insights from Nongstoin migmatitic granite gneiss”</p></article>
+  <article class="past-alumni-item"><h3>Mayurakshi Paul</h3><p class="past-alumni-thesis">“Distribution of melt fractions in migmatites across the Zimithang Thrust, Western Arunachal Himalaya, NE India: a study based on the zircon melt-o-meter technique”</p></article>
+  <article class="past-alumni-item"><h3>Kallul Borgohain</h3><p class="past-alumni-thesis">“Mesoscopic deformation and microtextures of the Greater Himalayan Sequence, Eastern Arunachal Himalaya, NE India: an integrated study to understand structural and metamorphic evolution”</p></article>
+  <article class="past-alumni-item"><h3>Navya Sonowal</h3><p class="past-alumni-thesis">“Determination of paleostress and strain in the hanging wall of the Lumla Thrust, Western Arunachal Himalaya, NE India”</p></article>
+  <article class="past-alumni-item"><h3>Bishal Boruah</h3><p class="past-alumni-thesis">“An integrated petrographic, textural and metamorphic study of the Greater Himalayan Sequence, Western Arunachal Himalaya, NE India”</p></article>
+  <article class="past-alumni-item"><h3>Protyush Neog</h3><p class="past-alumni-thesis">“Characterizing the inverse metamorphic sequence in the Lower Greater Himalayan Sequence, Eastern Arunachal Himalaya, NE India: a microtextural study”</p></article>
+  <article class="past-alumni-item"><h3>Deepsanu Sharma</h3><p class="past-alumni-thesis">“Determination of deformation temperature, differential stress and strain rate in the Bomdila Gneiss, Western Arunachal Himalaya, NE India”</p></article>
+  <article class="past-alumni-item"><h3>Marian Chorai</h3><p class="past-alumni-thesis">“Vorticity analysis across the Bomdila Gneiss along the Bhalukpong–Bomdila–Dirang transect, Western Arunachal Himalaya, NE India”</p></article>
+  <article class="past-alumni-item"><h3>N. Mosmi Singha</h3><p class="past-alumni-thesis">“Metamorphism of the Nongstoin Granite Gneiss of West Khasi Hills, Meghalaya, NE India: an integrated textural and geothermobarometric study”</p></article>
+  <article class="past-alumni-item"><h3>Rajdeep Hore</h3><p class="past-alumni-thesis">“Crystal size distribution analysis in the Nongpoh granitoids, Meghalaya, NE India: insights into crystal nucleation and growth rate”</p></article>
+  <article class="past-alumni-item"><h3>Samudrajee Baruah</h3><p class="past-alumni-thesis">“A review of the structural framework, metamorphic history and geochronological records of the Aravalli Craton, NW India”</p></article>
+  <article class="past-alumni-item"><h3>Wazbir Ahmed</h3><p class="past-alumni-thesis">“Variation of the kinematic vorticity number of mylonitic rocks in and around the Lumla Thrust, Western Arunachal Himalaya, Northeast India”</p></article>
+  <article class="past-alumni-item"><h3>Bedanto Chutia</h3><p class="past-alumni-thesis">“Digital image analysis of the Sela Group of rocks, Arunachal Himalaya, NE India: implications for crustal deformation”</p></article>
+  <article class="past-alumni-item"><h3>Rituraj Hazarika</h3><p class="past-alumni-thesis">“A review study on the formation of Himalayan leucogranite”</p></article>
+  <article class="past-alumni-item"><h3>Runjun Boruah</h3><p class="past-alumni-thesis">“Deformation temperature and vorticity pattern along the Barapani–Tyrsad Shear Zone, East Khasi Hills, Meghalaya”</p></article>
+  <article class="past-alumni-item"><h3>Jubaraj Borgohain</h3><p class="past-alumni-thesis">“A study on deformation patterns along the Tawang–Lumla section, Western Arunachal Himalaya, NE India”</p></article>
+  <article class="past-alumni-item"><h3>Bhaskar Jyoti Dihingia</h3><p class="past-alumni-thesis">“A study on partial melting of rocks in the Greater Himalayan Sequence, Western Arunachal Himalaya, NE India”</p></article>
+  <article class="past-alumni-item"><h3>Kalpajyoti Mazumdar</h3><p class="past-alumni-thesis">“Vorticity analysis across the Zimithang Thrust, Western Arunachal Himalaya, Northeast India”</p></article>
+  <article class="past-alumni-item"><h3>Keneisa-u-Kense</h3><p class="past-alumni-thesis">“Petrographic and microstructural studies of basement rocks in and around Nongstoin, West Khasi Hills, Meghalaya”</p></article>
+  <article class="past-alumni-item"><h3>Rajashree Gogoi</h3><p class="past-alumni-thesis">“Deformation temperature, differential paleostress and strain rate variation in the Barapani–Tyrsad Shear Zone, East Khasi Hills, Meghalaya, NE India”</p></article>
+  <article class="past-alumni-item"><h3>Himangshu Saikia</h3><p class="past-alumni-thesis">“Concept of supercontinents: a review study”</p></article>
+  <article class="past-alumni-item"><h3>Yashaswi Doley</h3><p class="past-alumni-thesis">“Metamorphism in subduction zones”</p></article>
+  <article class="past-alumni-item"><h3>Chajung Shamnyei Phom</h3><p class="past-alumni-thesis">“Tectonic evolution of the Naga–Manipur belt”</p></article>
+  <article class="past-alumni-item"><h3>Samudra Jyoti Dutta Baruah</h3><p class="past-alumni-thesis">“Origin and evolution of migmatites”</p></article>
+  <article class="past-alumni-item"><h3>Ruvito K. P. Chaya</h3><p class="past-alumni-thesis">“Zircon textures in igneous and metamorphic rocks”</p></article>
+  <article class="past-alumni-item"><h3>Debashri Kuli</h3><p class="past-alumni-thesis">“A review study on shear zone microstructures”</p></article>
+  <article class="past-alumni-item"><h3>Bhargabi Hazarika</h3><p class="past-alumni-thesis">“Timing of displacement along the Main Central Thrust Zone in the Himalaya: a review study”</p></article>
+  <article class="past-alumni-item"><h3>Ishan Jyoti Chetia</h3><p class="past-alumni-thesis">“A review study on metamorphism of the Lesser and Greater Himalayan Sequences of the Western Arunachal Himalaya, NE India”</p></article>
+  <article class="past-alumni-item"><h3>Sabyasachi Ganguly</h3><p class="past-alumni-thesis">“A review of the deformational records of the Lesser Himalayan Crystalline Sequence, Northeast Himalaya, India”</p></article>
+  <article class="past-alumni-item"><h3>Tara Shankar Goswami</h3><p class="past-alumni-thesis">“Structural architecture across the Main Central Thrust Zone of the NE Himalaya, India”</p></article>
+  <article class="past-alumni-item"><h3>Sourish Nath</h3><p class="past-alumni-thesis">“A review study on the petrography, microstructure and geochemistry of the Bomdila Gneiss, Arunachal Pradesh, India”</p></article>
+  <article class="past-alumni-item"><h3>Miraj Chetry</h3><p class="past-alumni-thesis">“Paleoproterozoic Lesser Himalayan Crystalline Sequence: insights for the reconstruction of the Columbia supercontinent”</p></article>
+</div>
   </section>
   <section>
     <h3 class="label" style="margin-bottom:14px">Join the group</h3>
@@ -1302,10 +1330,14 @@ main.wrap { font-size:18px; }
 <!-- PROSPECTIVE RESEARCHERS -->
 <div class="view" data-view="prospective">
   <div class="page-head">
-    <p class="label">Prospective doctoral and postdoctoral researchers</p>
-    <h2>Research opportunities</h2>
-    <p>I would be happy to host and mentor motivated researchers whose research interests align with my areas of expertise and ongoing research themes. If you are interested in pursuing research in these areas, please feel free to contact me to discuss potential research opportunities, collaborations, and funding possibilities.</p>
+    <p class="label">Join this Group</p>
+    <h2>Prospective Doctoral and Postdoctoral Researchers</h2>
   </div>
+  <section class="research-opportunities">
+    <h3>Research Opportunities</h3>
+    <p>I welcome applications from motivated and enthusiastic prospective doctoral (PhD) and postdoctoral researchers interested in pursuing research within my areas of expertise and ongoing research themes. I am keen to mentor researchers who are passionate about advancing our understanding of geological processes through field-based investigations, petrological and geochemical studies, geochronology, and tectonic research.</p>
+    <p>Prospective candidates whose research interests align with the ongoing activities of the research group are encouraged to get in touch to discuss potential research opportunities, collaborative projects, and available funding possibilities.</p>
+  </section>
   <div class="panel callout">
     <h3>Get in touch</h3>
     <p>Please send an email outlining your research interests and relevant academic or research experience.</p>
@@ -1351,6 +1383,37 @@ main.wrap { font-size:18px; }
     <figure class="tile"><div class="ph"><canvas data-pattern="foliation" aria-hidden="true"></canvas><span>Original image to be added</span></div><figcaption>Geochronology and analytical work</figcaption></figure>
     <figure class="tile"><div class="ph"><canvas data-pattern="melt" aria-hidden="true"></canvas><span>Original image to be added</span></div><figcaption>Conferences</figcaption></figure>
     <figure class="tile"><div class="ph"><canvas data-pattern="zircon" aria-hidden="true"></canvas><span>Original image to be added</span></div><figcaption>Group</figcaption></figure>
+  </div>
+</div>
+
+<!-- COLLABORATIONS -->
+<div class="view" data-view="collaborations">
+  <div class="page-head">
+    <p class="label">Collaborations</p>
+    <h2>Research Collaborations</h2>
+    <p>Research interactions and collaborations with academic and research institutions.</p>
+  </div>
+  <div class="collaboration-list">
+    <article class="collaboration-item">
+      <span class="collaboration-country">United States</span>
+      <h3><a href="https://www.geol.ucsb.edu/" target="_blank" rel="noopener">University of California, Santa Barbara</a></h3>
+      <p>Santa Barbara, USA</p>
+    </article>
+    <article class="collaboration-item">
+      <span class="collaboration-country">Canada</span>
+      <h3><a href="https://ok.ubc.ca/" target="_blank" rel="noopener">University of British Columbia – Okanagan</a></h3>
+      <p>Kelowna, British Columbia, Canada</p>
+    </article>
+    <article class="collaboration-item">
+      <span class="collaboration-country">Japan</span>
+      <h3><a href="https://www.okayama-u.ac.jp/eng/" target="_blank" rel="noopener">Okayama University</a></h3>
+      <p>Okayama, Japan</p>
+    </article>
+    <article class="collaboration-item">
+      <span class="collaboration-country">China</span>
+      <h3><a href="https://english.cas.cn/" target="_blank" rel="noopener">Chinese Academy of Sciences</a></h3>
+      <p>Beijing, China</p>
+    </article>
   </div>
 </div>
 
@@ -1505,7 +1568,7 @@ main.wrap { font-size:18px; }
   renderPubs();
 
   /* ---------- Router ---------- */
-  var VIEWS = ["home", "about", "research", "publications", "group", "prospective", "news", "gallery", "contact"];
+  var VIEWS = ["home", "about", "research", "publications", "group", "prospective", "collaborations", "news", "gallery", "contact"];
   var nav = document.getElementById("site-nav");
   var menuBtn = document.getElementById("menu-btn");
   function route() {
