@@ -966,6 +966,128 @@ main.wrap { font-size:18px; }
 }
 </style>
 
+
+<style id="petrotec-brand-and-homepage-final-refinements">
+.brand-name .brand-crustal-c {
+  color: #d99a62 !important;
+  font-weight: 900 !important;
+  display: inline !important;
+  font-style: normal !important;
+  text-shadow: 0 0 1px rgba(217,154,98,.35);
+}
+.himalayan-orogeny-feature {
+  grid-column: 1 / -1 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  overflow: hidden;
+}
+.himalayan-orogeny-feature > img {
+  width: 100% !important;
+  height: 210px !important;
+  object-fit: cover !important;
+  object-position: center 52% !important;
+  padding: 0 !important;
+  background: #102633 !important;
+}
+.himalayan-orogeny-feature .home-card-copy {
+  padding: 14px 16px 16px;
+}
+@media (max-width: 900px) {
+  .hero-science-collage.hero-portrait { max-width: 300px !important; }
+  .hero-portrait img { max-height: 285px !important; }
+}
+@media (max-width: 650px) {
+  .reference-hero .hero-portrait,
+  .hero-science-collage.hero-portrait {
+    width: min(100%, 215px) !important;
+    max-width: 215px !important;
+    justify-self: center !important;
+  }
+  .hero-portrait img {
+    width: 100% !important;
+    max-height: 235px !important;
+    object-fit: contain !important;
+  }
+  .himalayan-orogeny-feature > img { height: 155px !important; }
+}
+</style>
+
+
+<style id="latest-news-compact-scroll">
+.home-dashboard {
+  row-gap: 20px !important;
+}
+.home-right-column {
+  align-items: start !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: 20px !important;
+}
+.home-pt-card {
+  align-self: start !important;
+}
+.home-news-card {
+  align-self: start !important;
+  height: auto !important;
+  max-height: 390px !important;
+  padding: 16px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important;
+}
+.home-news-card .dashboard-heading {
+  flex: 0 0 auto !important;
+  margin-bottom: 8px !important;
+}
+.home-news-card .home-news-list {
+  display: block !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  max-height: 310px !important;
+  padding-right: 10px !important;
+  margin: 0 !important;
+}
+.home-news-card .home-news-list li {
+  padding: 9px 0 !important;
+  margin: 0 !important;
+}
+.home-news-card .home-news-list li p {
+  margin: 4px 0 0 !important;
+  line-height: 1.45 !important;
+}
+.home-news-card .home-news-list time {
+  display: block !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 900px) {
+  .home-right-column {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  }
+  .home-news-card { max-height: 370px !important; }
+}
+@media (max-width: 650px) {
+  .home-right-column { grid-template-columns: 1fr !important; }
+  .home-news-card { max-height: 350px !important; }
+  .home-news-card .home-news-list { max-height: 275px !important; }
+}
+</style>
+
+
+<style id="latest-news-remove-bullet">
+.home-news-card .home-news-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+.home-news-card .home-news-list li {
+  list-style: none !important;
+}
+.home-news-card .home-news-list li::marker,
+.home-news-card .home-news-list li::before {
+  content: none !important;
+  display: none !important;
+}
+</style>
+
 </head>
 <body>
 
@@ -977,7 +1099,7 @@ main.wrap { font-size:18px; }
 <header class="site-header reference-header">
 <div class="header-inner reference-header-inner">
 <a class="brand reference-brand" href="#home" aria-label="PETROTEC Lab home">
-<span class="brand-text"><span class="brand-name">PETROTEC <em>Lab</em></span><span class="brand-sub">Petrology, Tectonics and Crustal Evolution Laboratory</span></span></a>
+<span class="brand-text"><span class="brand-name">PETROTE<span class="brand-crustal-c">C</span> <em>Lab</em></span><span class="brand-sub">Petrology, Tectonics and Crustal Evolution Laboratory</span></span></a>
 <div class="university-lockup"><span><b>DEPARTMENT OF APPLIED GEOLOGY</b><small>Dibrugarh University, Assam, India</small></span><img class="brand-logo" src="assets/images/department-applied-geology.jpg" alt="Department of Applied Geology building, Dibrugarh University" width="240" height="240"></div>
 <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
 <nav class="nav reference-nav" id="site-nav" aria-label="Main">
@@ -994,10 +1116,14 @@ main.wrap { font-size:18px; }
 <div class="hero-science-collage hero-portrait" aria-label="Portrait of Dr. Purbajyoti Phukon"><img src="assets/images/purbajyoti-phukon.jpg" alt="Dr. Purbajyoti Phukon, Assistant Professor, Department of Applied Geology, Dibrugarh University"></div></section>
 
 <section class="home-dashboard">
-<aside class="home-profile"><p class="dashboard-eyebrow">Researcher</p><h2>Dr. Purbajyoti Phukon</h2><p>Dr. Purbajyoti Phukon is an Assistant Professor in the Department of Applied Geology at Dibrugarh University, Assam, India, and a Fulbright Fellow. His research focuses on metamorphic petrology, petrochronology and continental tectonics, particularly the thermal–tectonic evolution and deep-crustal processes of the Himalaya and high-grade Precambrian crystalline terrains.</p>
+<aside class="home-profile"><p class="dashboard-eyebrow">Researcher</p><h2>Dr. Purbajyoti Phukon</h2><p>Dr. Purbajyoti Phukon is an Assistant Professor in the Department of Applied Geology at Dibrugarh University, Assam, India, and a Fulbright Fellow. </p>
 <div class="profile-link-list"><a href="https://scholar.google.com/citations?user=vQPaCTkAAAAJ&amp;hl=en" target="_blank" rel="noopener"><b>GS</b> Google Scholar</a><a href="https://www.researchgate.net/profile/Purbajyoti-Phukon" target="_blank" rel="noopener"><b>RG</b> ResearchGate</a><a href="https://www.dibru.ac.in/user-profile/purbajyoti-phukon" target="_blank" rel="noopener"><b>DU</b> University Profile</a><span><b>iD</b> ORCID · link to be added</span></div></aside>
 
 <section class="home-research"><div class="dashboard-heading"><span class="heading-mark">⌁</span><h2>Research Interests</h2><i></i></div><div class="home-research-grid">
+<a class="home-research-card himalayan-orogeny-feature" href="#research">
+<img src="assets/images/himalayan-orogeny.jpg" alt="Himalayan mountain range illustrating the Himalayan orogeny">
+<div class="home-card-copy"><h3>Himalayan Orogeny</h3><p>Tectonic evolution of the Himalayan orogenic belt, including crustal thickening, metamorphism, deformation and exhumation.</p></div></a>
+
 <a class="home-research-card" href="#research">
 <img src="assets/images/crustal-melting-migmatite.jpg" alt="Migmatitic banding and high-grade crustal melting in the field">
 <div class="home-card-copy"><h3>Crustal Melting</h3><p>Partial melting, melt generation, segregation and migration in the continental crust.</p></div></a>
@@ -1020,9 +1146,11 @@ main.wrap { font-size:18px; }
 
 <aside class="home-right-column"><figure class="home-pt-card"><canvas id="pt" width="600" height="480" role="img" aria-label="Schematic pressure–temperature path for a Himalayan metamorphic terrain"></canvas><figcaption>Simplified P–T path of the migmatites from Greater Himalayan Sequence constrained by metamorphic modeling</figcaption></figure>
 <section class="home-news-card"><div class="dashboard-heading"><span class="heading-mark">▤</span><h2>Latest News</h2><i></i></div><ul class="home-news-list">
+<li><time>November 2026</time><p>Delivered an invited lecture titled “The Himalayan Carbon Connection: Metamorphic CO₂ Fluxes and the Global Carbon Budget” at a workshop organised by the Department of Civil Engineering, Assam Engineering College, Guwahati, Assam, India.</p></li>
+<li><time>September 2026</time><p>Served as a Resource Person and delivered an invited lecture at the Certificate Course on “Advances in Petrology” held at Arya Vidyapeeth College (Autonomous), Guwahati, Assam, India.</p></li>
 <li><time>July 2026</time><p>Talk at Goldschmidt 2026: “Unlocking Hidden Carbon: Metamorphic Degassing in the Eastern Himalaya”.</p></li>
-<li><time>2026</time><p>Joined the Department of Applied Geology, Dibrugarh University as Assistant Professor.</p></li>
 <li><time>April 2026</time><p>Invited talk in the M-cube lecture series: “Tracking Thrust Activity Through Petrochronology: Examples from the Himalaya”.</p></li>
+<li><time>February 2026</time><p>Joined the Department of Applied Geology, Dibrugarh University as Assistant Professor.</p></li>
 </ul></section></aside></section></div>
 
 <!-- ABOUT -->
@@ -1156,6 +1284,14 @@ main.wrap { font-size:18px; }
         <h3>Geological and Structural Mapping</h3>
         <p>Field-based geological and structural mapping to establish lithological relationships, document deformation features and interpret the tectonic architecture of Himalayan and Precambrian terrains.</p>
         <div class="research-tags"><span>Geological mapping</span><span>Structural geology</span><span>Field relationships</span></div>
+      </div>
+    </article>
+    <article class="research-card research-orogeny">
+      <div class="research-card-body">
+        <span class="research-index">07 / OROGENIC TECTONICS</span>
+        <h3>Himalayan Orogeny</h3>
+        <p>Investigating the tectonic evolution of the Himalayan orogenic belt through integrated studies of crustal thickening, metamorphism, deformation, magmatism and exhumation.</p>
+        <div class="research-tags"><span>Himalayan tectonics</span><span>Metamorphic evolution</span><span>Crustal processes</span></div>
       </div>
     </article>
   </section>
